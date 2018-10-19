@@ -24,7 +24,7 @@ A container is a standard unit of software that packages up code and all its dep
 
 Please Clone your server
 ```bash
-git clone git@github.com:febririzki461/sample-microservices-go-docker.git
+git clone git@github.com:CBNCloud/sample-microservice-docker-container.git
 ```
 
 ## Docker-build
