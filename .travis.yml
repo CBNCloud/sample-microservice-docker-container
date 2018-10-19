@@ -1,0 +1,34 @@
+# This is a weird way of telling Travis to use the fast container-based test
+# runner instead of the slow VM-based runner.
+sudo: false
+
+language: go
+
+# Only the last two Go releases are supported by the Go team with security
+# updates. Any older versions be considered deprecated. Don't bother testing
+# with them.
+go:
+  - 1.9.x
+  - 1.8.x
+# Only clone the most recent commit.
+git:
+  depth: 1
+
+# Skip the install step. Don't `go get` dependencies. Only build with the code
+# in vendor/
+install:
+  - go get -u github.com/gin-gonic/gin
+  - go get -u github.com/stretchr/testify/assert
+# script always runs to completion (set +e). If we have linter issues AND a
+
+jobs:  
+  include:
+    - stage: "Deployment"
+      go : 1.8                
+      name:  "unit testing All"            
+      script: go test logins/test/*.go
+    - stage: "Production"
+      go : 1.9
+      name:  "Unit Testing All"
+      script: go test logins/test/*.go
+
