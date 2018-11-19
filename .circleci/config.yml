@@ -26,4 +26,4 @@ jobs:
 
     steps:
       # specify any bash command here prefixed with `run: ` 
-      - run: go test -v ../logins/test/*.go
+      - run: go test -v hello.go
