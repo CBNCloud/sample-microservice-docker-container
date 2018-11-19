@@ -25,8 +25,5 @@ jobs:
 
 
     steps:
-      - checkout
-
-      # specify any bash command here prefixed with `run: `
-      - run: go get -v -t -d logins/test/*.go 
+      # specify any bash command here prefixed with `run: ` 
       - run: go test -v logins/test/*.go
