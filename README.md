@@ -1,7 +1,6 @@
-## Introduction
-This is Sample Microservices go docker
+<p align="center"><img src="https://www.cbncloud.co.id/wp-content/uploads/2017/02/logo-header-fix.png"></p>
 
-## Microservices
+## Introduction
 Microservice architecture, or simply microservices, is a distinctive method of developing software systems that tries to focus on building single-function modules with well-defined interfaces and operations. The trend has grown popular in recent years as Enterprises look to become more Agile and move towards a DevOps and continuous testing. Microservices can help create scalable, testable software that can be delivered weekly, not yearly.
 
 ## Docker 
@@ -19,16 +18,13 @@ A container is a standard unit of software that packages up code and all its dep
   * [Docker](#docker)
   * [Docker-port](#docker-port)
   * [Push-docker-hub](#push-docker-hub)
-  * [Testing](#testing)
-    * [Testing-curl-logins](#testing-curl-logins)
-    * [Testing-curl-users](#testing-curl-users)
 <!--te-->
 
 ## Install
 
 Please Clone your server
 ```bash
-git clone git@github.com:febririzki461/sample-microservices-go-docker.git
+git clone git@github.com:CBNCloud/sample-microservice-docker-container.git
 ```
 
 ## Docker-build
@@ -53,7 +49,7 @@ in docker images you can see <b>Users</b> in images docker
 ## Docker
 in docker you can start container, example :
 ```bash
-docker run -d logins
+docker run -d <images docker>
 ```
 noted: 
 <b> by default follow the installation port in the docker image </b>
@@ -61,5 +57,16 @@ noted:
 ## Docker-port
 same with Docker, but you can change docker port, example :
 ```bash
-docker run -p 5000:9080 -d logins
+docker run -p <inggress>:<enggres> -d <images docker>
 ```
+
+## Push-docker-hub
+you can push images docker hub :
+```bash
+Docker tag <images id > <dockerid>/<name images>:<tag>
+```
+noted:
+images id : you can see docker ( docker images ) <br>
+dockerid : login dockerid <br>
+name images : you can see docker ( docker images ) <br>
+tag : you must fill the tag, but you don't fill the name is latest <br>
