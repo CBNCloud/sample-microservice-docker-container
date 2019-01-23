@@ -6,4 +6,4 @@ pipelines:
           - npm install
           - npm test
         after-script:
-          - echo "after script has run!"
+          - echo "after script has run!hh"
