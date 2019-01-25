@@ -1,9 +1,21 @@
-pipelines:
-  default:
-    - step:
-        name: Build and test
-        script:
-          - npm install
-          - npm test
-        after-script:
-          - echo "after script has run!hh"
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
