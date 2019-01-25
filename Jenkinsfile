@@ -17,10 +17,5 @@ pipeline {
                 echo 'Deploying....'
             }
         }
-        stage('Push Production') {
-            steps {
-                echo 'Production....'
-            }
-        }
     }
 }
